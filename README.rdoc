@@ -1,0 +1,20 @@
+# Roolbox
+
+Bunch of useful Ruby code that I reuse in most of my Rails and Ruby projects.
+
+I group them in one repository because each file is too small to have its own  gem.
+
+Feel free to pick those you need.
+
+## List of files
+
+  coquille.rb runs shell commands and grab results from stderr and stdout.
+  database_admin.rb lists and deletes all tables.
+  fluent_factory.rb overrides new to instanciate the right sub class.
+  form_builder.rb appends error message to labels forms.
+  foreign_key.rb Helper methods to add foreign key constraints.
+  http.rb Helper method to fetch an URL and follow redirections.
+  isolated_blocks.rb runs a collection of blocks in an isolated way.
+  random_string.rb generates a random string.
+  redifine_const.rb Remove and define a new value for a given constant.
+  retry_on.rb runs a block and retry if the specific exception has been raises.

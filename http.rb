@@ -31,5 +31,11 @@ module Net
       options = {use_ssl: url.scheme.downcase == 'https'}
       Net::HTTP.start(url.host, url.port, options) { |http| http.head(url.request_uri) }
     end
+
+    def self.url_exists?(url)
+      Net::HTTP.head_url(url).is_a?(Net::HTTPOK)
+    rescue Net::HTTPServerError, Errno::ETIMEDOUT, Timeout::Error, SocketError
+      false
+    end
   end
 end
